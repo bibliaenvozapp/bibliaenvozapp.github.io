@@ -1,0 +1,47 @@
+/* Colores de la app: gris salvia con turquesa (con versión oscura). Sin fuentes externas, para no
+   enviar datos de quien visita a ningún servicio. */
+:root {
+  --fondo: #f5f5f0;
+  --texto: #0f172a;
+  --texto-suave: #475569;
+  --acento: #0e7490;
+  --linea: #e4e5e1;
+  --resumen: #cfeff6;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fondo: #161a1a;
+    --texto: #e5e7eb;
+    --texto-suave: #9ca3af;
+    --acento: #22b8d6;
+    --linea: #2c3333;
+    --resumen: #0e4f5e;
+    color-scheme: dark;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  padding: 0 20px;
+}
+.pagina { max-width: 68ch; margin: 0 auto; padding-block: 40px 64px; }
+h1 { font-family: Georgia, "Times New Roman", serif; font-weight: 600; font-size: 2rem; line-height: 1.2; margin: 0 0 4px; }
+h2 { font-size: 1.15rem; margin: 32px 0 8px; }
+a { color: var(--acento); }
+.volver { margin: 0 0 24px; }
+.volver a { text-decoration: none; }
+.fecha, .lema, .firma { color: var(--texto-suave); margin-top: 0; }
+.resumen { background: var(--resumen); border-radius: 14px; padding: 4px 20px 8px; margin-top: 24px; }
+.resumen h2 { margin-top: 16px; }
+ul { padding-left: 1.2em; }
+li { margin-bottom: 6px; }
+.permisos dt { font-weight: 600; margin-top: 14px; }
+.permisos dd { margin: 2px 0 0; color: var(--texto-suave); }
+.cabecera { display: flex; gap: 16px; align-items: center; margin-bottom: 24px; }
+.cabecera img { border-radius: 18px; flex: none; }
+.enlaces { margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--linea); color: var(--texto-suave); }
